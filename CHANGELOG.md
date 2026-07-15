@@ -6,6 +6,19 @@ Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
 Belum ada perubahan baru yang menunggu rilis.
 
+## [0.8.0] - VSCode-style UI Overhaul
+
+### Added
+- Activity Bar di sisi kiri (ikon Explorer, Search, Settings) — layout makin mirip VSCode asli
+- Breadcrumb path di atas editor (`PawnStudio › nama_file.pwn`)
+- Indikator posisi cursor live di status bar (`Ln X, Col Y`)
+- Warna ikon file berbeda per tipe ekstensi (`.pwn` ungu sesuai brand, `.inc` biru muda, `.js`/`.json` kuning, `.css` biru, `.html` oranye) — di file explorer maupun tab
+- Ikon file kecil di setiap tab, konsisten dengan warna di file explorer
+
+### Changed
+- Status bar dipecah jadi grup kiri (info file) dan kanan (cursor position, bahasa) agar lebih rapi
+- Tombol Settings kini juga bisa diakses dari Activity Bar, selain dari topbar
+
 ## [0.7.0] - Branding & Polish
 
 ### Added
