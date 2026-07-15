@@ -6,6 +6,27 @@ Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
 Belum ada perubahan baru yang menunggu rilis.
 
+## [1.0.0] - Real Filesystem Storage & Full File Management
+
+### Added
+- Tombol Upload File dan Upload Folder di File Explorer
+- Rename dan delete kini tersedia untuk folder juga, tidak hanya file
+- Upload folder mendukung struktur bersarang (nested) lewat ekstraksi `.zip` menggunakan JSZip
+
+### Changed
+- **BREAKING:** Storage project dimigrasikan total dari `localStorage` ke `@capacitor/filesystem` — file kini disimpan sebagai file asli di `Documents/PawnStudio/` pada penyimpanan perangkat, bukan lagi terbatas kuota browser (~5-10MB)
+- Seluruh fungsi di `fileManager.js` diubah menjadi asynchronous (Promise-based) mengikuti Filesystem API
+- JSZip dimuat sebelum AMD loader Monaco untuk mencegah konflik sistem modul
+
+### Fixed
+- Error `Setting the value of 'pawnstudio_vfs' exceeded the quota` saat upload folder besar
+- Error `Directory is not defined` — enum `Directory`/`Encoding` Capacitor di-hardcode karena tidak tersedia di runtime tanpa bundler
+- Error install "Aplikasi tidak terinstal" akibat perbedaan debug signing key antar build CI (workaround: uninstall versi lama sebelum install baru)
+
+### Known Issues
+- Upload folder masih memerlukan format `.zip`, belum bisa langsung pilih folder mentah (keterbatasan `webkitdirectory` pada WebView Android)
+- Signing key debug build belum konsisten antar build CI — kadang perlu uninstall manual sebelum update
+
 ## [0.9.0] - Fully Offline
 
 ### Changed
