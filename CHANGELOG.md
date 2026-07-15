@@ -6,6 +6,15 @@ Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
 Belum ada perubahan baru yang menunggu rilis.
 
+## [0.9.0] - Fully Offline
+
+### Changed
+- Monaco Editor dibundel langsung ke dalam APK (folder `www/vs/`), tidak lagi di-load dari CDN eksternal
+- App sekarang bisa dibuka dan dipakai 100% offline dari awal — editor, syntax highlighting, auto-complete, hingga compiler — tanpa membutuhkan koneksi internet sama sekali, tervalidasi lewat pengujian Airplane Mode penuh
+
+### Removed
+- Dependency ke `cdnjs.cloudflare.com` untuk loading Monaco Editor
+
 ## [0.8.0] - VSCode-style UI Overhaul
 
 ### Added
