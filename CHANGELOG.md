@@ -6,6 +6,16 @@ Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
 Belum ada perubahan baru yang menunggu rilis.
 
+## [1.1.0] - VSCode-style Sidebar & Filesystem Fixes
+
+### Added
+- Section "OPEN EDITORS" di sidebar, menampilkan daftar tab yang sedang terbuka (mirror dari tab bar), bisa switch/close langsung dari situ
+- Root project folder ("PAWNSTUDIO") kini collapsible dengan chevron, konsisten dengan pola VSCode desktop
+
+### Fixed
+- Error `FILE_NOTCREATED` saat upload/extract folder `.zip` — ditambahkan flag `recursive: true` langsung pada setiap pemanggilan `Filesystem.writeFile`, karena `mkdir` saja tidak selalu cukup untuk memastikan direktori induk tersedia saat file ditulis
+- Callback inisialisasi utama kini benar-benar `async`/`await` mengikuti Filesystem API, memperbaiki potential race condition yang tersisa dari migrasi storage sebelumnya
+
 ## [1.0.0] - Real Filesystem Storage & Full File Management
 
 ### Added
@@ -101,6 +111,26 @@ Belum ada perubahan baru yang menunggu rilis.
 
 ### Added
 - Syntax highlighting PAWN custom (`pawnLanguage.js`) — keyword, tipe data, string, comment, angka, dan function call
+- Auto-complete/IntelliSense (`pawnCompletion.js`) — 30+ fungsi umum SA-MP/Open.MP beserta deskripsi parameter, dan snippet struktur kode (`if`, `for`, callback `OnPlayer*`, dll)
+
+## [0.2.0] - File Management System
+
+### Added
+- Sidebar File Explorer — buat, buka, dan hapus file/folder
+- Sistem multi-tab dengan indikator unsaved changes (dirty state)
+- `fileManager.js` — modul abstraksi storage berbasis `localStorage`, didesain agar mudah diganti ke `@capacitor/filesystem` tanpa mengubah `main.js`
+- Keyboard shortcut Ctrl+S untuk save
+
+### Changed
+- `index.html` dan `style.css` dirombak untuk mendukung layout sidebar + tab bar
+
+## [0.1.0] - Initial Setup
+
+### Added
+- Struktur dasar `index.html`, `style.css`, `main.js`
+- Integrasi Monaco Editor via CDN (AMD loader)
+- Tema gelap ala VSCode, full-screen layout
+- Auto-restore draft terakhir dari `localStorage`
 - Auto-complete/IntelliSense (`pawnCompletion.js`) — 30+ fungsi umum SA-MP/Open.MP beserta deskripsi parameter, dan snippet struktur kode (`if`, `for`, callback `OnPlayer*`, dll)
 
 ## [0.2.0] - File Management System
