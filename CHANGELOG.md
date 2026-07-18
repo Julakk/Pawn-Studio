@@ -6,6 +6,20 @@ Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
 Belum ada perubahan baru yang menunggu rilis.
 
+## [1.2.0] - Native Storage Plugin (Major Stability Fix)
+
+### Fixed
+- **Bug kritis**: file/folder yang dihapus muncul kembali secara misterius, bahkan setelah uninstall total aplikasi. Setelah investigasi panjang (cek race condition, cek Android Auto Backup, cek Google/Samsung Cloud backup), akar masalah dilacak ke plugin resmi `@capacitor/filesystem` yang tidak konsisten pada operasi delete+recreate+list secara berurutan di Android.
+
+### Changed
+- **BREAKING:** Seluruh lapisan penyimpanan file dipindah dari `@capacitor/filesystem` ke plugin native custom (`NativeStoragePlugin.java`) yang menggunakan `java.io.File` secara langsung — tanpa lapisan abstraksi tambahan yang berpotensi menyimpan bug
+- `fileManager.js` ditulis ulang total untuk memanggil plugin native ini, dengan signature fungsi yang tetap sama persis (tidak ada perubahan di `main.js`)
+- `android:allowBackup` dinonaktifkan di `AndroidManifest.xml` sebagai langkah pencegahan tambahan
+
+### Added
+- `data_extraction_rules.xml` untuk mengunci aturan no-backup secara eksplisit di Android 12+
+
+
 ## [1.1.0] - VSCode-style Sidebar & Filesystem Fixes
 
 ### Added
@@ -111,26 +125,6 @@ Belum ada perubahan baru yang menunggu rilis.
 
 ### Added
 - Syntax highlighting PAWN custom (`pawnLanguage.js`) — keyword, tipe data, string, comment, angka, dan function call
-- Auto-complete/IntelliSense (`pawnCompletion.js`) — 30+ fungsi umum SA-MP/Open.MP beserta deskripsi parameter, dan snippet struktur kode (`if`, `for`, callback `OnPlayer*`, dll)
-
-## [0.2.0] - File Management System
-
-### Added
-- Sidebar File Explorer — buat, buka, dan hapus file/folder
-- Sistem multi-tab dengan indikator unsaved changes (dirty state)
-- `fileManager.js` — modul abstraksi storage berbasis `localStorage`, didesain agar mudah diganti ke `@capacitor/filesystem` tanpa mengubah `main.js`
-- Keyboard shortcut Ctrl+S untuk save
-
-### Changed
-- `index.html` dan `style.css` dirombak untuk mendukung layout sidebar + tab bar
-
-## [0.1.0] - Initial Setup
-
-### Added
-- Struktur dasar `index.html`, `style.css`, `main.js`
-- Integrasi Monaco Editor via CDN (AMD loader)
-- Tema gelap ala VSCode, full-screen layout
-- Auto-restore draft terakhir dari `localStorage`
 - Auto-complete/IntelliSense (`pawnCompletion.js`) — 30+ fungsi umum SA-MP/Open.MP beserta deskripsi parameter, dan snippet struktur kode (`if`, `for`, callback `OnPlayer*`, dll)
 
 ## [0.2.0] - File Management System
