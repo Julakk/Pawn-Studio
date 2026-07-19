@@ -6,6 +6,14 @@ Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
 Belum ada perubahan baru yang menunggu rilis.
 
+## [1.3.0] - Welcome Screen & Problems Indicator
+
+### Added
+- Welcome Screen yang muncul saat tidak ada file terbuka: tombol File Baru/Folder Baru, dan daftar Recent Files (5 terakhir)
+- Badge jumlah error/warning di status bar, update otomatis setiap kali compile
+- Filter ekstensi file di FolderPicker dihapus — sekarang semua jenis file bisa diupload lewat folder picker native (dengan catatan file binary dibaca sebagai teks)
+
+
 ## [1.2.0] - Native Storage Plugin (Major Stability Fix)
 
 ### Fixed
@@ -88,14 +96,6 @@ Belum ada perubahan baru yang menunggu rilis.
 
 ### Added
 - Panel Settings (ikon gear di topbar) dengan opsi:
-  - Font size editor (Kecil/Sedang/Besar/Extra Besar)
-  - Tema editor (Dark/Light/High Contrast)
-  - Toggle Word Wrap
-- Preferensi settings tersimpan permanen di `localStorage`, otomatis diterapkan ulang tiap app dibuka
-
-## [0.5.0] - Compiler Integration (Native, Offline)
-
-### Added
 - Integrasi compiler PAWN asli (`pawn-lang/compiler`), di-cross-compile khusus untuk Android arm64-v8a menggunakan Android NDK
 - Workflow GitHub Actions terpisah (`build-pawncc-arm64.yml`) untuk build binary compiler dari source
 - Custom Capacitor plugin (`PawnCompilerPlugin`) yang menjalankan compiler sebagai native process dari dalam app
