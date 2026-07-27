@@ -13,21 +13,25 @@
 ---
 
 ## 📖 Tentang
-**PawnStudio** adalah *code editor* berbasis web yang dirancang khusus untuk perangkat Android. Fokus utama kami adalah menghadirkan pengalaman *coding* Pawn yang ringan, responsif, dan fleksibel, memungkinkan kamu untuk mengelola dan menyusun kode langsung dari *smartphone* di mana saja.
+**PawnStudio** adalah *code editor* berbasis web yang dirancang khusus untuk perangkat Android. Fokus utama kami adalah menghadirkan pengalaman *coding* Pawn yang ringan, responsif, dan fleksibel, memungkinkan kamu untuk mengelola dan menyusun kode langsung dari *smartphone* di mana saja[cite: 1].
 
 ## ✨ Fitur Utama
-* 💻 **Monaco Editor Engine**: Dapatkan pengalaman *coding* yang familiar, mirip dengan VS Code.
-* 📱 **Mobile Optimized**: Antarmuka yang dirancang khusus untuk kemudahan navigasi layar sentuh.
-* 🚀 **Lightweight**: Dioptimalkan untuk performa maksimal agar tidak membebani perangkatmu.
-* 📂 **File Management**: Mendukung *upload* file, pembuatan folder, dan manajemen proyek langsung dalam aplikasi.
+* 💻 **Monaco Editor Engine**: Dapatkan pengalaman *coding* yang familiar, mirip dengan VS Code[cite: 1].
+* 📱 **Mobile Optimized**: Antarmuka yang dirancang khusus untuk kemudahan navigasi layar sentuh[cite: 1].
+* 🚀 **Lightweight**: Dioptimalkan untuk performa maksimal agar tidak membebani perangkatmu[cite: 1].
+* 📂 **File & Folder Management**: Mendukung *upload* file/folder, pembuatan direktori, dan manajemen proyek langsung dalam aplikasi[cite: 1].
 
-## 🚧 Status Proyek
-Saat ini PawnStudio berada dalam tahap **pengembangan aktif (Pre-Alpha)**. Fitur-fitur baru terus ditambahkan dan perbaikan *bug* dilakukan secara berkala.
+## 🚧 Status Proyek & Known Issues
+Saat ini PawnStudio berada dalam tahap **pengembangan aktif**. Fitur *upload* file dan folder sudah resmi dirilis, namun kami sedang memperbaiki beberapa kendala (*known issues*) terkait jalur *include* (path compiler) saat proses *compile* kode tertentu[cite: 1].
+
+## 📥 Download Aplikasi
+Kamu bisa mengunduh versi terbaru PawnStudio melalui link di bawah ini:
+* **[Download PawnStudio APK (MediaFire)](https://www.mediafire.com/file/yqvjixq2u0y0lkt/PawnStudio.apk/file)**[cite: 1]
 
 ## 🤝 Kontribusi
 Kami sangat terbuka untuk kontribusi! Jika kamu menemukan *bug* atau memiliki ide fitur baru, jangan ragu untuk:
-1. Membuka **Issue** baru.
-2. Melakukan *pull request* untuk perbaikan.
+1. Membuka **Issue** baru[cite: 1].
+2. Melakukan *pull request* untuk perbaikan[cite: 1].
 
 ---
 <div align="center">
