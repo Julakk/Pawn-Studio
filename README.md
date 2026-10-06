@@ -24,10 +24,6 @@
 ## 🚧 Status Proyek & Known Issues
 Saat ini PawnStudio berada dalam tahap **pengembangan aktif**. Fitur *upload* file dan folder sudah resmi dirilis, namun kami sedang memperbaiki beberapa kendala (*known issues*) terkait jalur *include* (path compiler) saat proses *compile* kode tertentu[cite: 1].
 
-## 📥 Download Aplikasi
-Kamu bisa mengunduh versi terbaru PawnStudio melalui link di bawah ini:
-* **[Download PawnStudio APK (MediaFire)](https://www.mediafire.com/file/yqvjixq2u0y0lkt/PawnStudio.apk/file)**[cite: 1]
-
 ## 🤝 Kontribusi
 Kami sangat terbuka untuk kontribusi! Jika kamu menemukan *bug* atau memiliki ide fitur baru, jangan ragu untuk:
 1. Membuka **Issue** baru[cite: 1].
