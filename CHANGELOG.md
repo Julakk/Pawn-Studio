@@ -6,6 +6,24 @@ Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
 Belum ada perubahan baru yang menunggu rilis.
 
+## [1.5.0] - HUD Overhaul (Header, Explorer, Status Bar, Symbol Bar)
+
+### Added
+- **Bar simbol di atas keyboard**: tombol cepat `Tab` `{` `}` `;` `(` `)` `[` `]` `#` `<` `>` yang muncul otomatis saat editor difokus. Tombol tidak menutup keyboard, dan simbol diketik lewat Monaco sehingga auto-close bracket tetap jalan
+- **Status compile** di status bar: Siap / Compiling... / Compile OK / Compile gagal, lengkap dengan durasi compile
+- **Tombol toggle Word Wrap** di status bar (`Wrap: On/Off`), sinkron dengan pengaturan di Settings
+- Versi aplikasi ditampilkan di Settings
+- Ikon file baru yang lebih jelas per tipe: kode (`.pwn`, `.inc`, `.js`, dll), teks, dan binary
+
+### Changed
+- **Word Wrap sekarang mati secara default** (termasuk untuk user lama, lewat migrasi pengaturan satu kali). Baris panjang seperti `#include` tidak lagi terpotong jadi beberapa baris; geser horizontal untuk melihat sisanya
+- Header: nama workspace tampil sebagai badge, tombol aksi dirapikan dan rata kanan, tombol Run diberi warna aksen
+- Explorer: tombol aksi di header jadi satu baris dengan area tap lebih besar, item file/folder lebih lega, ikon folder berwarna, garis indentasi pada isi folder
+- File binary (`.dll`, `.exe`, `.so`, `.amx`, dan sejenisnya) diredupkan agar file kode lebih menonjol
+- Badge error/warning di status bar ditampilkan sebagai pill berwarna (merah/kuning) dan bisa diketuk untuk membuka Output Panel
+- `windowSoftInputMode` diset `adjustResize` agar layout (termasuk bar simbol) naik mengikuti keyboard
+- Versi APK dinaikkan ke `1.5.0` (`versionName` 1.5.0, `versionCode` 15); sebelumnya `versionName` masih `1.0`
+
 ## [1.4.0] - Bulk Import & Compiler Include Path
 
 ### Added
