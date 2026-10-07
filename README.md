@@ -5,7 +5,7 @@
 
 [![Version](https://img.shields.io/badge/version-v1.5.1-blue.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)]()
-[![Discord](https://img.shields.io/badge/discord-join%20community-7289da.svg)](https://discord.gg/Pse9eaAP2n)
+[![Discord](https://img.shields.io/badge/discord-join%20community-7289da.svg)](https://discord.gg/82hxdZy6Gf)
 [![Saweria](https://img.shields.io/badge/support-saweria-orange.svg)](https://saweria.co/bangjulak12)
 
 </div>
