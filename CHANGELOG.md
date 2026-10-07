@@ -2,6 +2,26 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.5.4] - 2026-10-08
+
+### Added
+- Snippet callback baru: OnGameModeExit, OnPlayerDeath, OnPlayerText, OnDialogResponse, OnPlayerEnterVehicle, OnPlayerKeyStateChange.
+
+## [1.5.3] - 2026-10-08
+
+### Changed
+- Auto-complete: daftar fungsi SA-MP diperlengkap (player, kendaraan, textdraw, object, server, string, float, PVar, file).
+
+## [1.5.2] - 2026-10-07
+
+### Fixed
+- Toolbar simbol numpuk: sebelumnya ada dua bar sekaligus di atas keyboard (`#symbol-bar` lama dan `#v151-bar`), sehingga baris simbol kepotong. Sekarang tinggal satu bar.
+- Ikon Settings (gear) di activity bar dan daftar file paling bawah di explorer tidak lagi ketutup toolbar saat toolbar tampil.
+
+### Changed
+- Bar simbol lama (`#symbol-bar`) dinonaktifkan, semua simbolnya dipakai lewat `#v151-bar`.
+- Toolbar ditambah simbol `_` dan `:`.
+
 ## [1.5.1] - 2026-10-07
 
 ### Removed
