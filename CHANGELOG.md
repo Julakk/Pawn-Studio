@@ -2,9 +2,23 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
-## [Unreleased]
+## [1.5.1] - 2026-10-07
 
-Belum ada perubahan baru yang menunggu rilis.
+### Removed
+- Fitur Git di dalam app (init, commit, push, pull) beserta plugin native GitPlugin dan dependensi JGit, karena APK dirilis publik.
+
+### Added
+- Lisensi MIT (LICENSE.md).
+- **Pengecekan pra-compile (preflight)**: sebelum pawncc jalan, app mengecek kurung `{ }` `( )` `[ ]` yang tidak seimbang, pola karakter nyasar seperti `}(;`, dan karakter aneh di nama `#include`. Temuan muncul di panel Output lengkap dengan nomor baris. Pengecekan ini cuma peringatan, compile tetap dijalankan
+
+### Fixed
+- Error "Binary compiler tidak ditemukan" saat compile: native library (libpawncc.so) sekarang di-extract ke disk lewat useLegacyPackaging = true.
+- Bar simbol: karakter tidak lagi ter-insert saat bar digeser, insert hanya saat tap (sebelumnya bisa menyelipkan `}`, `(`, `;` ke kode dan bikin compile gagal)
+
+### Changed
+- Preflight sekarang mendeteksi string/karakter yang belum ditutup.
+- Bar simbol: ditambah simbol `" % = / \ , & | ! + - * _ : ' @` dan bisa digeser
+- README: fitur dan roadmap disamakan dengan kondisi app
 
 ## [1.5.0] - HUD Overhaul (Header, Explorer, Status Bar, Symbol Bar)
 
