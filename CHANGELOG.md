@@ -2,6 +2,21 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.5.7] - 2026-10-08
+
+### Fixed
+- Tombol Cari / Ganti: coba beberapa aksi Monaco dan tampilkan pesan jika panel pencarian tidak bisa dibuka.
+
+## [1.5.6] - 2026-10-08
+
+### Added
+- Tombol Cari / Ganti di header dan di ikon pencarian sidebar (memakai panel Find/Replace bawaan Monaco).
+
+## [1.5.5] - 2026-10-08
+
+### Fixed
+- Label versi di Settings dan Pengaturan Lanjutan sekarang sesuai versi rilis (sebelumnya masih menampilkan v1.5.2 di build 1.5.3 dan 1.5.4).
+
 ## [1.5.4] - 2026-10-08
 
 ### Added
