@@ -2,6 +2,11 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.5.8] - 2026-10-09
+
+### Added
+- Dukungan include open.mp: kode yang memakai <open.mp> atau <omp_*> dicompile dengan include open.mp bawaan (omp-stdlib, MPL-2.0). Kode SA-MP klasik tidak berubah.
+
 ## [1.5.7] - 2026-10-08
 
 ### Fixed
