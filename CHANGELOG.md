@@ -2,6 +2,13 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.5.9] - 2026-10-09
+
+### Added
+- Auto-complete konstanta SA-MP (234 nama, mis. INVALID_PLAYER_ID, DIALOG_STYLE_*, WEAPON_*, KEY_*) lengkap dengan keterangan grup.
+- Petunjuk parameter saat kursor di dalam kurung fungsi, parameter yang sedang diisi disorot.
+- Hover di nama fungsi dan konstanta.
+
 ## [1.5.8] - 2026-10-09
 
 ### Added
