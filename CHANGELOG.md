@@ -2,6 +2,20 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.6.0] - 2026-10-09
+
+### Added
+- Icon folder & file berwarna ala Material Icon Theme (icons.js): gamemodes, filterscripts, plugins, scriptfiles, npcmodes, database, logs, compiled, dan lainnya punya warna + simbol sendiri. File .pwn, .inc, .amx, .dll, .so, .bat, .cfg, .json, .zip, .png juga punya icon sendiri.
+- Tombol "..." di tiap item Explorer buat nampilin Rename dan Hapus.
+- Dukungan penulisan Node.js: file .mjs, .cjs, dan .ts dikenali. Auto-complete dan hover untuk require/process/Buffer dan modul bawaan Node (fs, path, os, http, https, events, util, child_process, url, crypto, readline), termasuk alias node:. Tipe dimuat hanya saat file JS/TS dibuka.
+- Snippet Node.js: req, reqfs, readfile, httpserver, express, discordbot, asyncfn, trycatch.
+- Tombol Run di file .js/.mjs/.cjs/.ts menampilkan petunjuk, tidak lagi dikirim ke compiler PAWN. Menjalankan Node.js di dalam app direncanakan untuk versi berikutnya.
+
+### Changed
+- Tombol Rename/Hapus di Explorer disembunyikan secara default, cuma tampil di file yang lagi aktif atau item yang diketuk tombol "...". Daftar file jadi lebih rapi dan nama file lebih lega.
+- File binary (.dll, .amx, .so) tidak lagi diabu-abukan, icon tetap berwarna dengan opacity 0.85.
+- Versi APK dinaikkan ke 1.6.0 (versionCode 25).
+
 ## [1.5.9] - 2026-10-09
 
 ### Added
