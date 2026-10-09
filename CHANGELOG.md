@@ -2,6 +2,37 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.8.0] - 2026-10-10
+
+### Added
+- npm di dalam app. Tombol npm di header Explorer: ketik perintah, contoh `install discord.js`, `uninstall express`, `ls`, `init`. npm 10 (JavaScript murni) dibundel di APK dan dijalankan lewat runtime Node.js yang sama, jadi tidak perlu Termux. Paket masuk ke node_modules di folder project aktif dan langsung bisa di-require dari file .js. Explorer dimuat ulang otomatis setelah npm selesai.
+- package.json dibuat otomatis kalau belum ada, supaya paket tidak terpasang di folder induk.
+- Workflow build.yml membundel npm ke assets APK saat build.
+
+### Changed
+- Perintah npm dibatasi: install, i, add, uninstall, remove, rm, update, ls, list, init. Nama paket hanya dari registry npm (tanpa URL atau path). Script lifecycle (preinstall/postinstall) dimatikan dan symlink .bin tidak dibuat, karena Android tidak punya /bin/sh dan penyimpanan eksternal tidak mendukung symlink.
+- Label status bar untuk Node/npm dipersingkat (contoh: "✓ Node OK (0.7s)") supaya tidak memotong nama file dan bahasa.
+- Tombol di header Explorer diperkecil sedikit supaya kelima tombol (termasuk npm) muat.
+
+### Known Issues
+- Paket yang butuh kompilasi native (node-gyp) tidak bisa dipasang. Paket JavaScript murni seperti discord.js dan express adalah target utamanya.
+- Butuh internet saat npm install. Belum diuji di perangkat.
+
+## [1.7.0] - 2026-10-09
+
+### Added
+- Menjalankan Node.js langsung di dalam app. Runtime Node.js 18 (nodejs-mobile, arm64-v8a) ikut tertanam di APK, jadi tidak perlu Termux atau setup apa pun. Tekan Run di file .js/.mjs/.cjs, output tampil live di panel Output, tekan tombol yang sama lagi (berubah jadi Stop) untuk menghentikan. Proses jalan di folder project aktif.
+- Plugin native NodeRunner (status, run, stop) dan launcher android/native/nodeexec.c.
+- Workflow build.yml menyiapkan runtime Node.js otomatis saat build (unduh libnode.so, strip, build launcher dengan NDK).
+
+### Changed
+- Tombol Run di file Node.js sekarang benar-benar menjalankan file, bukan lagi menampilkan petunjuk. File .ts tetap menampilkan petunjuk (compile ke .js dulu).
+- Ukuran APK bertambah karena runtime Node.js ikut dibundel.
+
+### Known Issues
+- Hanya arm64-v8a dan Node.js 18; npm belum tersedia (node_modules yang sudah ada di folder project tetap bisa di-require).
+- Sebagian modul bawaan yang butuh akses sistem Android (misalnya os.networkInterfaces) bisa gagal. Belum diuji di perangkat.
+
 ## [1.6.0] - 2026-10-09
 
 ### Added
