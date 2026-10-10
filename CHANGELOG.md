@@ -2,6 +2,62 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.9.0] - 2026-10-10
+
+### Added
+- Tombol "Salin" di header panel Output untuk menyalin seluruh isi output sekaligus, berguna untuk menempel error ke chat. Tombol berubah jadi "Tersalin ✓" saat berhasil. Baris lama yang sudah terbuang karena batas panel tidak ikut tersalin.
+
+### Changed
+- Teks di panel Output dipaksa bisa di-select (`user-select: text`).
+- Nomor versi diperbarui ke 1.9.0 di Pengaturan, Pengaturan Lanjutan, `package.json`, dan `build.gradle`.
+
+## [1.8.9] - 2026-10-10
+
+### Fixed
+- Addon native Node (misalnya `@napi-rs/canvas`) gagal dimuat dengan `cannot locate symbol "napi_unwrap"`. `libnode.so` sekarang di-preload secara global saat Node diluncurkan, sehingga addon bisa menemukan simbol Node-API.
+
+## [1.8.8] - 2026-10-10
+
+### Fixed
+- Nomor versi di Pengaturan sekarang sesuai dengan versi APK.
+
+## [1.8.7] - 2026-10-10
+
+### Fixed
+- Modul native (file `.node`, misalnya `@napi-rs/canvas`) yang berada di storage bersama (`/storage/emulated/0/...`) sekarang bisa dimuat. Android menolak `dlopen` dari lokasi itu, jadi file `.node` otomatis disalin sekali ke folder internal app lalu dimuat dari sana.
+
+## [1.8.6] - 2026-10-10
+
+### Fixed
+- Bot discord.js yang memakai `@discordjs/builders` tidak lagi crash dengan `Invalid regular expression ... Invalid property name in character class`. Preload shim sekarang mengganti semua Unicode property escape (`\p{L}`, `\p{Ll}`, `\p{Lm}`, `\p{Lo}`, `\p{N}`, `\p{Nd}`, script Devanagari/Thai, dan sejenisnya) di semua modul, bukan cuma beberapa yang ketemu sebelumnya.
+
+## [1.8.5] - 2026-10-10
+
+### Fixed
+- Lanjutan 1.8.4: runtime Node di APK tidak mendukung `\p{...}` sama sekali, jadi `\p{Letter}` dan `\p{Number}` di `discord-api-types` juga ikut diganti ke range Unicode setara. Bot discord.js sekarang bisa dimuat tanpa `Invalid regular expression`.
+
+## [1.8.4] - 2026-10-10
+
+### Fixed
+- Bot discord.js tidak lagi crash dengan `SyntaxError: Invalid regular expression ... Invalid property name in character class` saat memuat `discord-api-types`. Runtime Node di APK tidak mendukung Unicode script property `\p{sc=Deva}` dan `\p{sc=Thai}`, jadi regex itu otomatis diganti ke range Unicode setara sebelum modul dikompilasi (lewat preload shim).
+
+## [1.8.3] - 2026-10-10
+
+### Fixed
+- Error Node.js yang tidak tertangkap (misalnya modul tidak ditemukan, atau promise ditolak tanpa catch) sekarang tampil di panel Output. Sebelumnya prosesnya keluar dengan kode 1 tanpa pesan apa pun.
+- Pesan stderr (console.error) tidak lagi hilang kalau stderr tidak tersambung ke panel Output.
+
+## [1.8.2] - 2026-10-10
+
+### Fixed
+- Petunjuk "Tidak ada output sama sekali" sekarang menghitung baris output yang tidak kosong, jadi tetap muncul walau Node hanya mengeluarkan spasi atau baris kosong.
+
+## [1.8.1] - 2026-10-10
+
+### Added
+- Diagnostik exit Node.js: kalau script keluar lewat process.exit(kode) dengan kode bukan 0, panel Output menampilkan dari file dan baris mana process.exit() dipanggil. Berguna buat nemuin script yang keluar diam-diam (misalnya validasi config tanpa pesan).
+- Petunjuk di panel Output kalau Node keluar dengan error tanpa output sama sekali.
+
 ## [1.8.0] - 2026-10-10
 
 ### Added
