@@ -2,6 +2,32 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.10.0] - 2026-10-11
+
+### Added
+- Preview untuk project HTML. Buka file `.html`, lalu ketuk tombol Preview (ikon mata) atau tombol ▶. File `style.css` dan `script.js` yang di-link dengan `<link href>` dan `<script src>` otomatis digabung, dan isi editor yang belum disimpan ikut terpakai.
+- Mode **Split**: editor di atas, preview di bawah. Editor menyusut mengikuti preview, sehingga kursor tidak tertutup. Tombol **Penuh** / **Split** untuk berpindah mode, dan pilihan terakhir diingat.
+- Preview live: berubah otomatis sekitar 0,7 detik setelah berhenti mengetik, tanpa perlu menyimpan. Posisi scroll dipertahankan. Hanya file yang dipakai halaman tersebut yang memicu muat ulang.
+- Gambar lokal tampil di preview, baik lewat `<img src>` maupun `url()` di CSS (PNG, JPG, GIF, WebP, SVG, ICO, BMP, AVIF; maksimal 4 MB per gambar).
+- Navigasi antar-halaman HTML: link seperti `<a href="about.html">` dibuka di dalam preview, dengan tombol **‹** untuk kembali.
+- Tombol **Output** di bar preview untuk menampilkan atau menyembunyikan panel Output. Preview menyesuaikan tingginya dan tidak lagi tertutup panel.
+- `console.log`, `console.warn`, `console.error`, dan error JavaScript dari preview tampil di panel Output (bisa disalin dengan tombol Salin).
+- Native: metode `readFileBase64` di `NativeStoragePlugin`, dibatasi di dalam folder workspace dan maksimal 4 MB.
+- Ekstensi `.htm` dikenali sebagai HTML.
+
+### Changed
+- `console.log` biasa dari preview tidak lagi memunculkan panel Output sendiri. Hanya error yang membukanya.
+- Tombol ▶ pada file `.js`, `.pwn`, dan file lain tetap menjalankan Node atau compiler seperti sebelumnya. Hanya file `.html` yang diarahkan ke preview.
+
+### Fixed
+- CSS yang berisi teks `</style>` di dalam string tidak lagi memotong blok style saat preview.
+
+### Catatan
+- Preview berjalan di iframe sandbox tanpa akses ke file maupun plugin aplikasi, sehingga `localStorage` dan `fetch` ke file lokal tidak tersedia di dalam preview.
+- Link ke situs luar tidak dibuka, hanya dicatat di panel Output. Form yang dikirim ke halaman lain belum didukung.
+- Setiap muat ulang mengulang halaman dari awal, jadi isi form dan state JavaScript di dalam preview ikut tereset.
+- Library dari internet (CDN, Google Fonts) hanya termuat kalau HP sedang online.
+
 ## [1.9.0] - 2026-10-10
 
 ### Added
