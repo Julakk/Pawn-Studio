@@ -18,7 +18,10 @@ Semua perubahan penting pada project PawnStudio dicatat di file ini.
   - **Ganti** per hasil dan **Ganti Semua** dengan konfirmasi sebelum diubah.
   - Pencarian berjalan paralel, hasil muncul langsung selagi mencari, ada tombol **Stop** dan indikator progres. Isi file di-cache sementara supaya pencarian berikutnya lebih cepat.
   - Folder `.git`, `node_modules`, dan file biner dilewati.
+- **Flag compiler tambahan** di Pengaturan (contoh `-d3 -;+ -(+`). Hanya flag aman yang diteruskan ke compiler: `-d0..3`, `-;`, `-(`, `-O0..3`, `-v0..2`, `-w<nomor>`, dan `-E`. Flag lain, termasuk `-i` dan `-o`, diabaikan.
 
+### Changed
+- Mode SA-MP/DL: include milik project sekarang didahulukan atas include bawaan aplikasi, sama seperti mode open.mp. Gamemode yang membawa include sendiri tidak lagi tertimpa.
 
 ## [1.10.0] - 2026-10-11
 
