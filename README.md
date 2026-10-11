@@ -13,21 +13,35 @@
 ---
 
 ## 📖 Tentang
-**PawnStudio** adalah *code editor* berbasis web yang dirancang khusus untuk perangkat Android. Fokus utama kami adalah menghadirkan pengalaman *coding* Pawn yang ringan, responsif, dan fleksibel, memungkinkan kamu untuk mengelola dan menyusun kode langsung dari *smartphone* di mana saja[cite: 1].
+**PawnStudio** adalah *code editor* berbasis web yang dirancang khusus untuk perangkat Android. Fokus utama kami adalah menghadirkan pengalaman *coding* Pawn yang ringan, responsif, dan fleksibel, memungkinkan kamu untuk mengelola dan menyusun kode langsung dari *smartphone* di mana saja.
 
 ## ✨ Fitur Utama
-* 💻 **Monaco Editor Engine**: Dapatkan pengalaman *coding* yang familiar, mirip dengan VS Code[cite: 1].
-* 📱 **Mobile Optimized**: Antarmuka yang dirancang khusus untuk kemudahan navigasi layar sentuh[cite: 1].
-* 🚀 **Lightweight**: Dioptimalkan untuk performa maksimal agar tidak membebani perangkatmu[cite: 1].
-* 📂 **File & Folder Management**: Mendukung *upload* file/folder, pembuatan direktori, dan manajemen proyek langsung dalam aplikasi[cite: 1].
 
-## 🚧 Status Proyek & Known Issues
-Saat ini PawnStudio berada dalam tahap **pengembangan aktif**. Fitur *upload* file dan folder sudah resmi dirilis, namun kami sedang memperbaiki beberapa kendala (*known issues*) terkait jalur *include* (path compiler) saat proses *compile* kode tertentu[cite: 1].
+- 💻 **Monaco Editor**: pengalaman coding yang familiar, mirip VS Code
+- 🧠 **Auto-complete PAWN**: saran `native`, `stock`, `define`, dan `enum` dari isi project
+- 🔨 **Compile langsung di HP**: `pawncc` native (arm64) dengan panel output
+- 🎯 **Pilihan versi SA-MP**: `0.3.DL-R1`, `0.3.7-R2-1`, atau `0.3.7-R3`, plus dukungan include open.mp
+- 🔎 **Cari & Ganti di semua file**: opsi huruf besar/kecil, kata utuh, regex, dan filter ekstensi
+- 🐙 **Git di dalam aplikasi**: status, commit, push, dan pull langsung dari HP
+- ⚡ **Emmet & Format Kode**: ketik `ul>li*3` di HTML/CSS, plus tombol **Fmt**
+- 👁️ **Preview HTML/CSS/JS**: live preview dan mode split
+- 🟩 **Node.js & npm di HP**: jalankan script `.js` dan pasang paket JavaScript murni
+- 🎨 **Pengaturan**: tema editor, ukuran font, dan flag compiler tambahan
+- 📂 **File & Folder Management**: upload file/folder, buat direktori, multi-tab
+- 📱 **Mobile Optimized**: antarmuka dirancang untuk layar sentuh
+
+## 📲 Install
+
+Download APK terbaru di tab [**Releases**](https://github.com/Julakk/Pawn-Studio/releases), lalu install di Android (arm64).
+
+## 🚧 Status Proyek
+
+PawnStudio berada dalam **pengembangan aktif** (versi saat ini **v1.12.0**). Kalau ada error compile atau fitur yang tidak berjalan di gamemode kamu, laporkan lewat **Issue** atau Discord, sertakan teks error dari panel Output.
 
 ## 🤝 Kontribusi
 Kami sangat terbuka untuk kontribusi! Jika kamu menemukan *bug* atau memiliki ide fitur baru, jangan ragu untuk:
-1. Membuka **Issue** baru[cite: 1].
-2. Melakukan *pull request* untuk perbaikan[cite: 1].
+1. Membuka **Issue** baru.
+2. Melakukan *pull request* untuk perbaikan.
 
 ---
 <div align="center">
