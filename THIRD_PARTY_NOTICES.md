@@ -9,6 +9,9 @@ repo asal.
 | Monaco Editor | MIT | https://github.com/microsoft/monaco-editor |
 | Emmet | MIT | https://github.com/emmetio/emmet |
 | Capacitor | MIT | https://github.com/ionic-team/capacitor |
+| AndroidX (appcompat, core, documentfile, dll) | Apache License 2.0 | https://developer.android.com/jetpack/androidx |
+| Capacitor plugin Clipboard dan Filesystem | MIT | https://github.com/ionic-team/capacitor-plugins |
+| Dependensi bawaan JGit | Sesuai lisensi masing-masing (lihat JGit) | https://github.com/eclipse-jgit/jgit |
 | JSZip | MIT (dual MIT/GPLv3, dipakai di bawah MIT) | https://github.com/Stuk/jszip |
 | JGit | Eclipse Distribution License v1.0 (BSD-3-Clause) | https://github.com/eclipse-jgit/jgit |
 | Node.js dan nodejs-mobile | MIT | https://github.com/nodejs-mobile/nodejs-mobile |

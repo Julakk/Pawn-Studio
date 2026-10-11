@@ -4,7 +4,7 @@
 *Powerful Code Editor for Pawn Scripting on Android*
 
 [![Version](https://img.shields.io/badge/version-v1.12.0-blue.svg)]()
-[![License](https://img.shields.io/badge/license-MIT-green.svg)]()
+[![License](https://img.shields.io/badge/license-Freeware-orange.svg)](LICENSE)
 [![Discord](https://img.shields.io/badge/discord-join%20community-7289da.svg)](https://discord.gg/82hxdZy6Gf)
 [![Saweria](https://img.shields.io/badge/support-saweria-orange.svg)](https://saweria.co/bangjulak12)
 
@@ -47,3 +47,8 @@ Kami sangat terbuka untuk kontribusi! Jika kamu menemukan *bug* atau memiliki id
 <div align="center">
   <sub>Dikembangkan dengan ❤️ oleh <a href="https://github.com/Julakk">Julakk</a></sub>
 </div>
+
+## 📄 Lisensi
+
+PawnStudio **gratis dipakai tapi bukan open source**. Dilarang membagikan ulang APK, menjual, mengubah, atau membongkar aplikasinya. Kode yang kamu tulis dengan PawnStudio tetap milikmu. Selengkapnya di [LICENSE](LICENSE), dan komponen pihak ketiga di [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
