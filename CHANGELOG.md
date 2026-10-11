@@ -2,6 +2,11 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.12.0] - 2026-10-12
+
+### Added
+- **Pilihan Versi SA-MP** di Pengaturan: `0.3.DL-R1` (bawaan), `0.3.7-R2-1`, dan `0.3.7-R3`. Untuk 0.3.7, fungsi khusus 0.3.DL (`AddCharModel`, `AddSimpleModel`, `AddSimpleModelTimed`, `FindModelFileNameFromCRC`, `FindTextureFileNameFromCRC`, `RedirectDownload`) dianggap tidak ada, sehingga pemakaiannya langsung error saat compile, bukan baru bermasalah di server. Tidak berlaku di mode open.mp.
+
 ## [1.11.0] - 2026-10-12
 
 ### Added
