@@ -2,6 +2,24 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.11.0] - 2026-10-12
+
+### Added
+- **Emmet** untuk file HTML dan CSS. Ketik singkatan seperti `ul>li*3` lalu expand untuk menghasilkan struktur otomatis.
+- Tombol **Fmt** di toolbar simbol untuk merapikan kode.
+- **Auto-complete PAWN** dari isi project: `native`, `stock`, `define`, dan `enum` ikut disarankan saat mengetik.
+- **Git di dalam aplikasi** (JGit):
+  - Baca saja: status file, cabang, dan riwayat commit.
+  - Akun, inisialisasi repo, dan commit file yang dipilih.
+  - Atur remote, push, dan pull dengan token GitHub.
+- **Cari & Ganti di semua file**, dibuka lewat ikon 🔍 di bar kiri:
+  - Cari kata atau kalimat di seluruh file project, hasil dikelompokkan per file dengan nomor baris. Ketuk hasil untuk langsung membuka file dan lompat ke barisnya.
+  - Opsi huruf besar/kecil (Aa), kata utuh (ab), dan regex (.*), serta filter ekstensi (contoh `.pwn,.inc`, atau `*` untuk semua tipe file).
+  - **Ganti** per hasil dan **Ganti Semua** dengan konfirmasi sebelum diubah.
+  - Pencarian berjalan paralel, hasil muncul langsung selagi mencari, ada tombol **Stop** dan indikator progres. Isi file di-cache sementara supaya pencarian berikutnya lebih cepat.
+  - Folder `.git`, `node_modules`, dan file biner dilewati.
+
+
 ## [1.10.0] - 2026-10-11
 
 ### Added
