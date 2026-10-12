@@ -2,6 +2,19 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.14.0] - 2026-10-13
+
+### Fixed
+- **Tema tambahan (Monokai, Dracula, One Dark, AMOLED Black, Light) tidak lagi kembali ke bawaan setelah app ditutup dan dibuka lagi.** Pilihan tema sekarang tetap menang walau Pengaturan app menerapkan ulang tema bawaan.
+- Memilih **Bawaan app** di tema tambahan sekarang langsung berlaku, tanpa restart.
+- **Git: commit hanya memasukkan file yang dicentang.** Sebelumnya file lain yang sudah ter-stage ikut masuk ke commit.
+- **Git: Push dan Pull punya timeout 60 detik** dan jalan di thread terpisah, jadi koneksi yang macet tidak lagi menggantung dan menahan fitur lain (simpan file, compile).
+- Git: nama file yang mengandung `..` (mis. `a..b.pwn`) tidak lagi ditolak saat commit.
+
+### Changed
+- Tema tambahan sekarang mengubah seluruh tampilan app (top bar, sidebar, bar kiri, tab, breadcrumb, status bar, panel output, pengaturan), bukan hanya editor.
+- Warna editor lebih lengkap: nomor baris, kursor, gutter, minimap, panel saran, dan garis indent mengikuti tema.
+
 ## [1.13.0] - 2026-10-12
 
 ### Added
