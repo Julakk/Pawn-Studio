@@ -2,6 +2,19 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.13.0] - 2026-10-12
+
+### Added
+- **Node.js tetap jalan di latar belakang**. Bot atau script yang dijalankan dari PawnStudio tidak lagi mati waktu app ditutup, di-swipe dari recent apps, atau layar mati.
+  - Berjalan lewat foreground service dengan notifikasi permanen **"Node.js berjalan"** dan tombol **Stop** langsung di notifikasi.
+  - Memakai wake lock supaya CPU tidak tidur selama proses berjalan.
+  - Buka app lagi: UI tersambung ulang ke proses yang masih jalan dan menampilkan log yang sudah lewat (sampai 64 KB terakhir). Kalau prosesnya sudah selesai selagi app ditutup, hasilnya (kode keluar dan durasi) ikut ditampilkan.
+  - Saat pertama kali menjalankan Node, app menawarkan izin **abaikan optimasi baterai** supaya Samsung, Xiaomi, dan merek lain tidak mematikan prosesnya.
+  - Android 13 ke atas meminta izin notifikasi.
+
+### Changed
+- Proses Node/npm sekarang dipegang `NodeSession` (tidak lagi terikat ke Activity), jadi menutup app tidak menghentikannya. Hentikan lewat tombol Stop di app atau di notifikasi.
+
 ## [1.12.0] - 2026-10-12
 
 ### Added
