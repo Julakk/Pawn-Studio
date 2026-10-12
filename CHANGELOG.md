@@ -2,6 +2,20 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.14.2] - 2026-10-13
+
+### Fixed
+- Cek HP: tips merek HP (Samsung, Xiaomi, dan lainnya) sekarang berupa info biasa dan tidak dihitung sebagai catatan. Sebelumnya ringkasan di HP merek itu selalu "Sebagian fitur terbatas" walau semua izin sudah aktif.
+- Cek HP: nama merek ditulis dengan huruf awal besar (Samsung, bukan samsung).
+
+## [1.14.1] - 2026-10-13
+
+### Added
+- **Cek Kompatibilitas HP** (Pengaturan, tombol **Cek HP**). Menampilkan info HP (merek, model, versi Android, arsitektur CPU, RAM, sisa penyimpanan) dan status tiap fitur: compiler PAWN, Node.js, Git, serta izin akses semua file, notifikasi, dan penghematan baterai. Setiap izin yang belum aktif punya tombol langsung ke pengaturan sistemnya.
+- Compiler PAWN dan Node.js benar-benar dijalankan sebentar saat pengecekan, jadi hasilnya menunjukkan apakah binary-nya bisa jalan di HP itu, bukan sekadar file-nya ada.
+- Tombol **Salin laporan** untuk membagikan hasil pengecekan, misalnya saat melapor bug.
+- Tips khusus untuk merek HP yang sering mematikan aplikasi di latar belakang (Xiaomi, Oppo, Vivo, Samsung, dan lainnya).
+
 ## [1.14.0] - 2026-10-13
 
 ### Fixed
