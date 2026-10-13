@@ -2,6 +2,33 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.15.0] - 2026-10-13
+
+### Ditambahkan
+- Include bawaan APK (tanpa perlu memasang): sscanf2, YSI, streamer, a_mysql, zcmd, I-ZCMD, Pawn.CMD, Pawn.RakNet, crashdetect, amx_assembly, weapon-config. Otomatis masuk jalur include compiler dengan prioritas paling bawah, jadi versi milik proyek tetap menang.
+- Panel Ekstensi (ikon puzzle di activity bar): snippet, tema editor, dan paket include dalam format JSON. Pasang dari file atau repo GitHub (`pawnstudio-extension.json`), aktif/nonaktif, hapus. Ekstensi hanya berisi data dan tidak menjalankan kode.
+- Ekstensi bawaan: SA-MP Snippets dan Tema Tambahan (Nord, Tokyo Night, Solarized Dark, GitHub Dark).
+- Dokumentasi format ekstensi: `docs/EXTENSIONS.md`.
+- Panel Ekstensi: kolom pencarian "Cari ekstensi" yang menyaring daftar saat mengetik, dan ikon kotak berwarna per ekstensi (`www/ext-vscode.js`).
+
+### Diubah
+- Katalog Manajer Library: zcmd dan crashdetect memakai repo yang masih ada, I-ZCMD ditambahkan, a_mysql dipindah ke bawaan APK.
+- Backslash pada `#include` di library bawaan dinormalisasi agar YSI dkk compile di Android.
+- Tampilan seluruh app dibuat mirip VS Code (Dark+) lewat `www/vscode-theme.css`: warna editor, sidebar, activity bar, tab, breadcrumb, dan status bar biru.
+- Top bar: tombol jadi ikon polos tanpa kotak dan lebih rapat. Activity bar: penanda aktif berupa garis putih di kiri.
+- Explorer: header seksi bergaya VS Code, baris lebih rapat, garis panduan indentasi folder, tombol aksi baru muncul saat disentuh.
+- Tab: titik putih untuk file yang belum disimpan, tombol tutup lebih rapi.
+- Welcome screen: tombol bergaya link biru rata kiri, daftar Recent bergaya VS Code.
+- Panel Ekstensi, Pengaturan, dan panel Output mengikuti gaya VS Code (baris rapat, tombol biru kecil, tag berbentuk pil).
+
+## [1.14.3] - 2026-10-13
+
+### Ditambahkan
+- Manajer Library / Include: tombol buku di header Explorer. Pasang include dari GitHub langsung ke `pawno/include` proyek aktif (SA-MP stdlib, sscanf2, YSI, Streamer, MySQL, zcmd, Pawn.CMD, Pawn.RakNet, crashdetect, amx_assembly, weapon-config).
+- Repo kustom (`owner/repo`) untuk memasang include dari repo mana pun.
+- Cek pembaruan dan Hapus per library; versi tercatat di `pawno/.pawnstudio-libs.json`.
+- Hanya file `.inc` yang diekstrak (folder test/example/docs dilewati) dan struktur folder library dipertahankan.
+
 ## [1.14.2] - 2026-10-13
 
 ### Fixed
