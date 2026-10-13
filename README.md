@@ -3,8 +3,8 @@
 # 🐾 PawnStudio
 *Powerful Code Editor for Pawn Scripting on Android*
 
-[![Version](https://img.shields.io/badge/version-v1.14.2-blue.svg)]()
-[![License](https://img.shields.io/badge/license-Freeware-orange.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-v1.15.0-blue.svg)]()
+[![License](https://img.shields.io/badge/license-Freeare-orange.svg)](LICENSE)
 [![Discord](https://img.shields.io/badge/discord-join%20community-7289da.svg)](https://discord.gg/82hxdZy6Gf)
 [![Saweria](https://img.shields.io/badge/support-saweria-orange.svg)](https://saweria.co/bangjulak12)
 
