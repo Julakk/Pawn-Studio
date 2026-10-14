@@ -39,9 +39,9 @@ Download APK terbaru di tab [**Releases**](https://github.com/Julakk/Pawn-Studio
 PawnStudio berada dalam **pengembangan aktif** (versi saat ini **v1.12.0**). Kalau ada error compile atau fitur yang tidak berjalan di gamemode kamu, laporkan lewat **Issue** atau Discord, sertakan teks error dari panel Output.
 
 ## 🤝 Kontribusi
-Kami sangat terbuka untuk kontribusi! Jika kamu menemukan *bug* atau memiliki ide fitur baru, jangan ragu untuk:
-1. Membuka **Issue** baru.
-2. Melakukan *pull request* untuk perbaikan.
+Kami terbuka untuk laporan *bug* dan ide fitur baru. Silakan:
+- Membuka **Issue** baru di GitHub.
+- Atau sampaikan lewat Discord.
 
 ---
 <div align="center">
