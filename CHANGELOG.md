@@ -2,6 +2,38 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.16.0] - 2026-10-22
+
+### Ditambahkan
+
+- Preview HTML: hot-reload CSS. Mengedit atau menyimpan file CSS yang dipasang lewat `<link>` langsung mengganti gayanya di preview tanpa memuat ulang halaman, jadi state JavaScript, isi form, dan posisi scroll tetap. Perubahan HTML, file `@import`, atau `<style>` inline tetap memuat ulang penuh.
+- Preview HTML: `localStorage` dan `sessionStorage` sekarang jalan di preview. `localStorage` disimpan per folder halaman dan tetap ada setelah preview dimuat ulang atau aplikasi ditutup (maks 1 MB); `sessionStorage` direset setiap preview dibuka.
+- Preview HTML: tombol menu (⋯) untuk memilih ukuran layar (Otomatis, HP 375 px, Tablet 768 px, Desktop 1280 px, diskala agar muat), plus "Reset localStorage & sessionStorage".
+
+### Diperbaiki
+
+- Preview HTML: `<link rel="stylesheet">` yang dijadikan `<style>` tidak lagi kehilangan atribut `media`, `id`, dan `data-*`.
+- Preview HTML: `<script nomodule>` tidak lagi ikut berjalan, dan `id`/`data-*` pada script ikut terbawa.
+- Preview HTML: `@import` lokal di CSS sekarang dimuat (maks 5 tingkat, termasuk `@import ... media`), dengan peringatan jika berputar atau file tidak ditemukan.
+- Preview HTML: `srcset`, `poster` video, dan `style="...url()..."` lokal sekarang ikut dimuat, sehingga gambar tidak rusak di layar berdensitas tinggi.
+- Preview HTML: form yang dikirim tanpa `preventDefault()` tidak lagi membuat preview kosong atau ter-reset diam-diam; pengiriman diblokir dengan pesan di panel Output.
+
+### Diubah
+
+- Versi aplikasi naik ke 1.16.0 (versionCode 49).
+
+## [1.15.2] - 2026-10-21
+
+### Diperbaiki
+
+- Mode open.mp: kode yang memakai `<open.mp>` atau `<omp_*>` di modul gamemode (bukan di file utama) sekarang ikut dikenali, jadi compile tidak lagi salah mode. Pemindaian hanya mencakup folder file yang dicompile, bukan folder library.
+- Preflight: string yang bersambung ke baris berikutnya dengan backslash di ujung baris tidak lagi dilaporkan "belum ditutup", sehingga laporan palsu berantai (kurung tidak cocok) ikut hilang.
+
+### Diubah
+
+- Rapikan indentasi baris `-i` include di jalur compile SA-MP klasik (perilaku tidak berubah).
+- Versi aplikasi naik ke 1.15.2 (versionCode 48).
+
 ## [1.15.1] - 2026-10-16
 
 ### Ditambahkan
