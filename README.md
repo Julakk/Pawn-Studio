@@ -3,7 +3,7 @@
 # 🐾 PawnStudio
 *Powerful Code Editor for Pawn Scripting on Android*
 
-[![Version](https://img.shields.io/badge/version-v1.16.3-blue.svg)]()
+[![Version](https://img.shields.io/badge/version-v1.16.6-blue.svg)]()
 [![License](https://img.shields.io/badge/license-Freeare-orange.svg)](LICENSE)
 [![Discord](https://img.shields.io/badge/discord-join%20community-7289da.svg)](https://discord.gg/82hxdZy6Gf)
 [![Saweria](https://img.shields.io/badge/support-saweria-orange.svg)](https://saweria.co/bangjulak12)
@@ -36,7 +36,7 @@ Download APK terbaru di tab [**Releases**](https://github.com/Julakk/Pawn-Studio
 
 ## 🚧 Status Proyek
 
-PawnStudio berada dalam **pengembangan aktif** (versi saat ini **v1.16.3**). Kalau ada error compile atau fitur yang tidak berjalan di gamemode kamu, laporkan lewat **Issue** atau Discord, sertakan teks error dari panel Output.
+PawnStudio berada dalam **pengembangan aktif** (versi saat ini **v1.16.6**). Kalau ada error compile atau fitur yang tidak berjalan di gamemode kamu, laporkan lewat **Issue** atau Discord, sertakan teks error dari panel Output.
 
 ## 🤝 Kontribusi
 Kami terbuka untuk laporan *bug* dan ide fitur baru. Silakan:
