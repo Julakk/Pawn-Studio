@@ -2,6 +2,39 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.16.6] - 2026-10-26
+
+### Diperbaiki
+
+- Cari & Ganti semua file: file .py (juga .ts, .tsx, .jsx, .java, .kt, .gradle, .properties, .toml, .csv) sekarang ikut dicari saat kolom ekstensi kosong.
+- Hasil pencarian tidak lagi basi: cache isi file dibatasi 30 detik dan daftar file 60 detik.
+- Ganti per baris di mode regex sekarang benar untuk pola dengan lookahead atau anchor, dan mendukung $1, $& serta $<nama>.
+- Pola regex yang cocok dengan teks kosong ditolak sebelum mencari.
+- Mengganti isi file yang sedang terbuka di editor sekarang bisa di-undo, dan cache yang melewati batas tidak lagi menyisakan isi lama.
+- Ganti Semua memberi peringatan bila hasil dibatasi, menampilkan progres, dan melaporkan file yang gagal.
+
+### Diubah
+
+- Tampilan panel: opsi berlabel jelas, kolom ekstensi di baris sendiri, tombol Ganti Semua nonaktif sampai ada hasil, panah buka/tutup per file, hasil terurut per path, dan teks petunjuk di awal.
+- Ganti per baris hanya memindai ulang file itu, jadi daftar hasil tidak lagi kembali ke atas.
+- Versi aplikasi naik ke 1.16.6 (versionCode 55).
+
+## [1.16.5] - 2026-10-26
+
+### Diubah
+
+- Python: tombol Run langsung menjalankan kode tanpa dialog.
+- Python: `input()` sekarang interaktif lewat kolom isian di panel Python Output. Program meminta nilai satu per satu dan dijalankan ulang dari awal setiap nilai dikirim, jadi kode yang memakai random atau waktu bisa menghasilkan keluaran berbeda di tiap pengulangan.
+- Versi aplikasi naik ke 1.16.5 (versionCode 54).
+
+## [1.16.4] - 2026-10-26
+
+### Diubah
+
+- Python: tombol Run langsung menjalankan kode tanpa dialog input. Dialog "Program ini pakai input()" dari 1.16.3 dihapus.
+- Python: program yang memanggil `input()` berhenti dengan EOFError dan pesan penjelasan, karena input interaktif belum didukung.
+- Versi aplikasi naik ke 1.16.4 (versionCode 53).
+
 ## [1.16.3] - 2026-10-26
 
 ### Diperbaiki
