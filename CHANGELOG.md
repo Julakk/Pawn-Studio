@@ -2,6 +2,41 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.16.3] - 2026-10-26
+
+### Diperbaiki
+
+- Python: `input()` sekarang berhenti dengan EOFError saat nilai input habis, tidak lagi berputar tanpa akhir.
+- Python: setiap run memakai namespace baru, jadi variabel dan import dari run sebelumnya tidak bocor ke run berikutnya.
+
+### Ditambahkan
+
+- Python: dialog input muncul sebelum run bila kode memakai `input()` (nilai dipisahkan dengan |).
+- Git: daftar cabang, buat cabang baru, dan pindah cabang. Ketuk nama cabang di header panel Git.
+- Git: tombol Buang untuk membatalkan perubahan file terpilih (file yang belum dilacak dihapus permanen, dengan konfirmasi).
+- Versi aplikasi naik ke 1.16.3 (versionCode 52).
+
+## [1.16.2] - 2026-10-26
+
+### Diperbaiki
+
+- Status bar di layar portrait tidak lagi saling tumpuk (badge warning dan info indentasi); sekarang tampil dalam dua baris.
+- Activity bar di layar landscape: scrollbar dan efek overscroll/refresh dihilangkan, dan tombol dikecilkan supaya muat.
+- Chip nama project di header mengikuti lebar teks dan dipotong dengan ellipsis bila terlalu panjang; tanda "—" di depan nama dihapus.
+- Sidebar yang ditutup tidak lagi membocorkan tombol refresh/collapse ke atas activity bar di layar landscape.
+- Tinggi status bar di layar portrait dikunci untuk dua baris sehingga teks tidak terpotong.
+- Versi aplikasi naik ke 1.16.2 (versionCode 51).
+
+## [1.16.1] - 2026-10-23
+
+### Diubah
+
+- Layar awal: logo PawnStudio menggantikan ikon file generik, plus tombol baru "Buka Folder" dan "Git".
+- Explorer: file aktif di OPEN EDITORS sekarang abu-abu halus, sehingga sorotan biru tebal hanya ada di pohon file (WORKSPACE) dan tidak lagi dobel.
+- Status bar: menampilkan indentasi (Spasi/Tab) dan akhir baris (LF/CRLF) file aktif. Di layar sempit (maks 480 px) nama file di status bar disembunyikan karena sudah ada di tab.
+- Minimap otomatis dimatikan di layar sempit (di bawah 480 px) walau diaktifkan di Pengaturan, dan dinyalakan lagi saat layar melebar, supaya area kode lebih luas.
+- Versi aplikasi naik ke 1.16.1 (versionCode 50).
+
 ## [1.16.0] - 2026-10-22
 
 ### Ditambahkan
