@@ -2,6 +2,20 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.18.1] - 2026-11-15
+
+### Diperbaiki
+
+- Teks versi di dalam app (About dan `APP_VERSION`) sekarang ikut versi rilis, sebelumnya masih tertulis 1.18.0.
+- Runner Python native: `sys.stdout` sekarang punya `encoding` dan `reconfigure()`, jadi script yang memanggilnya tidak crash lagi.
+- `input()` di runner native sekarang menampilkan pesan yang jelas sebelum `EOFError`, bukan gagal tanpa keterangan.
+- Versi Python dan tag wheel di pip app sekarang mengikuti interpreter yang berjalan, tidak lagi dikunci ke 3.11. Ini syarat supaya upgrade Python berikutnya tidak membuat `pip install` menolak semua paket.
+
+### Diubah
+
+- Paket bawaan APK diberi batas versi mayor (`discord.py<3`, `aiohttp<4`, `requests<3`) supaya build tidak pecah gara-gara rilis mayor baru.
+- Versi aplikasi naik ke 1.18.1 (versionCode 59).
+
 ## [1.18.0] - 2026-11-13
 
 ### Ditambahkan
