@@ -2,6 +2,19 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.19.0] - 2026-11-19
+
+### Ditambahkan
+
+- PawnStudio versi PC/laptop (Windows): app desktop berbasis Electron yang memakai kode `www/` yang sama dengan APK. Rilis berupa ZIP (extract lalu jalankan) dan installer.
+- Di versi PC: compile PAWN lewat `pawncc.exe` 3.10.10 yang dibundel, Git (MinGit dibundel), runtime Node.js dan npm dibundel (PC tidak perlu install Node), Python pakai Python 3 di PC, Library Manager, dan buka folder project langsung dari lokasi aslinya.
+- Di versi PC: kalau jendela ditutup saat bot/proses masih jalan, app sembunyi ke tray dan proses lanjut.
+
+### Diubah
+
+- Workflow build desktop terpisah (`build-desktop.yml`), tidak mengganggu build APK.
+- Versi aplikasi naik ke 1.19.0 (versionCode 60).
+
 ## [1.18.1] - 2026-11-15
 
 ### Diperbaiki
