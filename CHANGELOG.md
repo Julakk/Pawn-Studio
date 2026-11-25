@@ -2,6 +2,67 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.19.4] - 2026-11-25
+
+### Diperbaiki
+
+- Cari di semua file sekarang membaca isi folder tanpa batas. Sebelumnya folder dengan lebih dari 3000 entri (misalnya scriptfiles atau models) dipotong diam-diam, sehingga file di dalamnya tidak ikut dicari dan tidak ikut diganti. Explorer tetap memakai batas 3000 supaya HP tidak kehabisan memori.
+- Status pencarian sekarang memberi tahu kalau ada folder yang gagal dibaca atau batas 6000 file tercapai, bukan lewat diam-diam.
+
+### Diubah
+
+- Versi aplikasi naik ke 1.19.4 (versionCode 65).
+
+## [1.19.3] - 2026-11-25
+
+### Diperbaiki
+
+- Cari di semua file tidak lagi melewatkan file besar secara diam-diam. Batas ukuran file dinaikkan dari 1 MB ke 20 MB, sehingga file seperti DIALOG.pwn (18.000+ baris) sekarang ikut dicari.
+- Ganti Semua tidak lagi berhenti di file-file pertama saja. Batas 1000 hasil kini hanya membatasi tampilan daftar, sedangkan semua file yang cocok tetap ikut diganti.
+- Status pencarian sekarang menampilkan jumlah file yang dilewati (gagal dibaca, biner, atau terlalu besar) dan jumlah file tambahan yang tidak tampil di daftar. Angka "file diperiksa" kini hanya menghitung file yang benar-benar dipindai.
+
+### Diubah
+
+- Tampilan HUD ala VS Code Dark Modern: warna sidebar dan editor, nama project sebagai pil di tengah title bar, activity bar lebih ramping dengan item aktif berkotak membulat, dan indikator compile sebagai badge di pojok kiri status bar.
+- Panel Cari & Ganti ala VS Code: opsi Aa, ab, dan .* ada di dalam kotak input, tombol AB di kotak Ganti untuk Ganti Semua, dan filter ekstensi disembunyikan di balik tombol ⋯.
+- Versi aplikasi naik ke 1.19.3 (versionCode 64).
+
+## [1.19.2] - 2026-11-24
+
+### Ditambahkan
+
+- Toolbar seleksi mengambang: Potong, Salin, Tempel, Semua, Hapus baris, tombol tutup, dan jumlah baris terpilih. Muncul saat teks dipilih, atau saat tekan lama di editor tanpa seleksi.
+- Handle seleksi bulat hijau di awal dan akhir teks terpilih, bisa digeser untuk menambah atau mengurangi seleksi. Editor ikut scroll saat handle ditarik ke tepi atas atau bawah.
+
+### Diperbaiki
+
+- Potong, Salin, dan Tempel sekarang benar-benar berfungsi di APK (lewat plugin Clipboard Capacitor).
+- Tombol toolbar tidak lagi macet karena gesture scroll, dan toolbar tidak kelebaran di layar sempit.
+
+### Diubah
+
+- Menu konteks bawaan Monaco (Change All Occurrences, Cut, Copy, Paste, Command Palette) dihapus, diganti toolbar seleksi.
+- Versi aplikasi naik ke 1.19.2 (versionCode 63).
+
+## [1.19.1] - 2026-11-22
+
+### Ditambahkan
+
+- Tema editor baru "VS Code Dark Modern" (latar `#1f1f1f`), jadi pilihan teratas di Settings dan default untuk instalasi baru.
+- Minimap di kanan editor dan nomor baris abu (baris aktif putih).
+
+### Diubah
+
+- Tampilan APK diperbarui ala VS Code Dark Modern: activity bar, Explorer + Open Editors, tab, breadcrumbs, dan status bar biru.
+- Mode padat ala VS Code: top bar, activity bar, tab, breadcrumbs, dan status bar dikecilkan, font editor default 12px, biar area editor lebih luas.
+- Titik spasi di editor sekarang hanya muncul saat teks dipilih (sebelumnya selalu tampil).
+- Minimap tidak lagi dimatikan otomatis di layar sempit (HP portrait).
+- Versi aplikasi naik ke 1.19.1 (versionCode 62).
+
+### Diperbaiki
+
+- Build APK tidak jalan karena `continue-on-error` dobel di `build.yml` (YAML tidak valid).
+
 ## [1.19.0] - 2026-11-19
 
 ### Ditambahkan
@@ -13,7 +74,7 @@ Semua perubahan penting pada project PawnStudio dicatat di file ini.
 ### Diubah
 
 - Workflow build desktop terpisah (`build-desktop.yml`), tidak mengganggu build APK.
-- Versi aplikasi naik ke 1.19.0 (versionCode 60).
+- Versi aplikasi naik ke 1.19.0 (versionCode 61).
 
 ## [1.18.1] - 2026-11-15
 
