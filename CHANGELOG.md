@@ -2,6 +2,28 @@
 
 Semua perubahan penting pada project PawnStudio dicatat di file ini.
 
+## [1.19.6] - 2026-11-27
+
+### Ditambahkan
+
+- Pilihan bahasa English sekarang menerjemahkan hampir semua teks app: Pengaturan Lanjutan, panel Git, Cari & Ganti, Ekstensi, Cek HP, toolbar seleksi, dialog konfirmasi, serta pesan compile, upload, Python, dan Node.js. Pesan yang muncul belakangan (toast, output) ikut diterjemahkan otomatis. Dokumentasi autocomplete dan menu bawaan Monaco belum diterjemahkan.
+
+### Diubah
+
+- Tampilan Pengaturan Lanjutan dibuat senada dengan Pengaturan: bottom sheet dengan kartu per bagian, toggle bulat pengganti checkbox, dan dropdown bergaya baru.
+- Versi aplikasi naik ke 1.19.6 (versionCode 67).
+
+## [1.19.5] - 2026-11-27
+
+### Ditambahkan
+
+- Pilihan bahasa Indonesia dan English di Pengaturan, tersimpan otomatis (bawaan Indonesia). Terjemahan mencakup halaman Pengaturan serta tombol dan tooltip di title bar, Explorer, status bar, dan layar sambutan. Panel lain (Git, Python, Cari & Ganti, Cek HP) menyusul.
+
+### Diubah
+
+- Tampilan Pengaturan lebih modern: kartu per bagian (Tampilan, Bahasa, Compiler, Tentang), toggle Word Wrap, pilihan bahasa berbentuk tombol segmented, dan dropdown bergaya baru.
+- Versi aplikasi naik ke 1.19.5 (versionCode 66).
+
 ## [1.19.4] - 2026-11-25
 
 ### Diperbaiki
